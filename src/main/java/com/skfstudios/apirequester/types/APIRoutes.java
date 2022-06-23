@@ -23,9 +23,44 @@ public enum APIRoutes {
     CREATE_TRANSACTIONS(APIType.POST, "createTransactions", "/minecraft/server/transactions/create"),
     UPDATE_TRANSACTIONS(APIType.POST, "updateTransactions", "/minecraft/server/transactions/update"),
 
+    GET_NICKNAME(APIType.GET, "getRandomNickname", "/minecraft/server/nicknames/random"),
+    NICKNAME_BLACKLISTED(APIType.GET, "isNicknameBlacklisted", "/minecraft/server/nicknames/isBlacklisted/%s"),
+    RESERVE_NICKNAME(APIType.POST, "reserveNickname", "/minecraft/server/nicknames/reserve"),
+    FREE_NICKNAME(APIType.POST, "freeNickname", "/minecraft/server/nicknames/free"),
+
+    GET_MESSAGES(APIType.GET, "getScheduledMessages", "/minecraft/server/messages"),
+    GET_MESSAGE_BY_ID(APIType.GET, "getScheduledMessage", "/minecraft/server/messages/%s"),
+    UPDATE_MESSAGE(APIType.POST, "updateScheduledMessage", "/minecraft/server/messages/update"),
+    CREATE_MESSAGE(APIType.POST, "createScheduledMessage", "/minecraft/server/messages/create"),
+
+    GET_ITEMS(APIType.GET, "getAllItemDescription", "/minecraft/server/items"),
+    GET_ITEMS_BY_ID(APIType.GET, "getItemDescription", "/minecraft/server/items/%s"),
+    UPDATE_ITEM(APIType.POST, "updateItemDescription", "/minecraft/server/items/update"),
+    CREATE_ITEM(APIType.POST, "createItemDescription", "/minecraft/server/items/create"),
+
+    GET_HOSTS(APIType.GET, "getAllHostRecord", "/minecraft/server/hosts"),
+    GET_HOSTS_BY_ID(APIType.GET, "getHostRecord", "/minecraft/server/hosts/%s"),
+    UPDATE_HOST(APIType.POST, "updateHostRecord", "/minecraft/server/hosts/update"),
+    CREATE_HOST(APIType.POST, "createHostRecord", "/minecraft/server/hosts/create"),
+
+    GET_GROUPS(APIType.GET, "getAllPlayerGroups", "/minecraft/server/groups"),
+    GET_GROUPS_BY_ID(APIType.GET, "getPlayerGroup", "/minecraft/server/groups/%s"),
+    UPDATE_GROUP(APIType.POST, "updatePlayerGroup", "/minecraft/server/groups/update"),
+    CREATE_GROUP(APIType.POST, "createPlayerGroup", "/minecraft/server/groups/create"),
+
+    GET_FRIENDSHIP_REQUEST_BY_UUID(APIType.GET, "getFriendshipDemandList", "/minecraft/server/friendship/requests/%s"),
+    GET_FRIENDSHIP_BY_UUID(APIType.GET, "getFriendshipList", "/minecraft/server/friendship/%s"),
+    POST_FRIENDSHIP_REQUEST(APIType.POST, "postFriendshipDemand", "/minecraft/server/friendship/post"),
+    ACCEPT_FRIENDSHIP_REQUEST(APIType.POST, "acceptFriendshipDemand", "/minecraft/server/friendship/accept"),
+    DENY_FRIENDSHIP_REQUEST(APIType.POST, "refuseFriendshipDemand", "/minecraft/server/friendship/deny"),
+
     PAYLOAD(APIType.POST, "payload", "/server/payload"),
 
-    CONFIG(APIType.GET, "config", "/minecraft/server/config")
+    CONFIG(APIType.GET, "getConfig", "/minecraft/server/config"),
+    UPDATE_CONFIG(APIType.POST, "updateConfig", "/minecraft/server/config/update"),
+
+    GET_DENOUNCES(APIType.GET, "getDenounces", "/minecraft/server/denounces"),
+    CREATE_DENOUNCE(APIType.POST, "denouncePlayer", "/minecraft/server/denounces/create"),
     ;
 
     public final APIType type;
