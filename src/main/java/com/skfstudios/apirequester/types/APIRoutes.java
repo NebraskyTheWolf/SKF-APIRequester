@@ -54,7 +54,17 @@ public enum APIRoutes {
     ACCEPT_FRIENDSHIP_REQUEST(APIType.POST, "acceptFriendshipDemand", "/minecraft/server/friendship/accept"),
     DENY_FRIENDSHIP_REQUEST(APIType.POST, "refuseFriendshipDemand", "/minecraft/server/friendship/deny"),
 
+    GET_ACHIEVEMENTS_CATEGORIES(APIType.GET, "getAchievementCategories", "/minecraft/server/achievements/category"),
+    GET_ACHIEVEMENTS_CATEGORY(APIType.GET, "getAchievementCategory", "/minecraft/server/achievements/category/%s"),
+    GET_ACHIEVEMENTS(APIType.GET, "getAchievements", "/minecraft/server/achievements"),
+    GET_ACHIEVEMENT(APIType.GET, "getAchievement", "/minecraft/server/achievements/%s"),
+    GET_ACHIEVEMENTS_PROGRESSES(APIType.GET, "getAchievementProgresses", "/minecraft/server/achievements/progress"),
+    GET_ACHIEVEMENTS_PROGRESS(APIType.GET, "getAchievementProgress", "/minecraft/server/achievements/progress/%s"),
+    UPDATE_ACHIEVEMENTS_PROGRESS(APIType.POST, "updateAchievementProgress", "/minecraft/server/achievements/progress/update"),
+    CREATE_ACHIEVEMENTS_PROGRESS(APIType.POST, "createAchievementProgress", "/minecraft/server/achievements/progress/create"),
+
     PAYLOAD(APIType.POST, "payload", "/server/payload"),
+    GET_PERMISSIONS(APIType.POST, "getPermissionsByType", "/minecraft/server/permissions"),
 
     CONFIG(APIType.GET, "getConfig", "/minecraft/server/config"),
     UPDATE_CONFIG(APIType.POST, "updateConfig", "/minecraft/server/config/update"),
